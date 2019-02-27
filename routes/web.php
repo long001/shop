@@ -27,6 +27,12 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'email_verified'], function() {
     	// 用户地址列表
         Route::get('user_addresses', 'UserAddressesController@index')->name('user_addresses.index');
+
+        // 地址新建页
+        Route::get('user_addresses/create', 'UserAddressesController@create')->name('user_addresses.create');
+
+        // 新建地址
+        Route::post('user_addresses', 'UserAddressesController@store')->name('user_addresses.store');
     });
 
 });
