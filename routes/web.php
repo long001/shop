@@ -53,6 +53,12 @@ Route::group(['middleware' => 'auth'], function() {
 
         // 加入购物车
         Route::post('cart', 'CartController@add')->name('cart.add');
+
+        // 查看购物车
+        Route::get('cart', 'CartController@index')->name('cart.index');
+
+        // 从购物车移除
+        Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
     });
 
 });
