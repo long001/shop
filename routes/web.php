@@ -62,6 +62,9 @@ Route::group(['middleware' => 'auth'], function() {
 
         // 创建购物订单
         Route::post('orders', 'OrdersController@store')->name('orders.store');
+
+        // 订单列表
+        Route::get('orders', 'OrdersController@index')->name('orders.index');
     });
 
 });
