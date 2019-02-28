@@ -13,3 +13,7 @@
 13. 地址联动选择器；
 14. 使用授权策略来控制权限；
 15. 使用 overtrue/laravel-lang 来汉化错误信息。
+16. laravel-admin 扩展包的安装；
+17. laravel-admin 扩展包的配置；
+19. laravel-admin 快速构建用户列表页面；
+20. laravel-admin 设置管理员权限。
