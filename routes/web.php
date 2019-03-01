@@ -86,6 +86,9 @@ Route::group(['middleware' => 'auth'], function() {
 
         // 退款申请
         Route::post('orders/{order}/apply_refund', 'OrdersController@applyRefund')->name('orders.apply_refund');
+
+        // 优惠券查询
+        Route::get('coupon_codes/{code}', 'CouponCodesController@show')->name('coupon_codes.show');
     });
 
 });
