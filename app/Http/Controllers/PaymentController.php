@@ -28,7 +28,7 @@ class PaymentController extends Controller
         ]);
     }
 
-    // 前端回调页面
+    // 前端回调页面，支付成功后浏览器跳转调用
     public function alipayReturn()
     {
         // 校验提交的参数是否合法
@@ -41,7 +41,7 @@ class PaymentController extends Controller
         return view('pages.success', ['msg' => '付款成功']);
     }
 
-    // 服务器端回调
+    // 服务器端回调，阿里直接请求服务器
     public function alipayNotify()
     {
         // 校验输入参数
@@ -106,7 +106,7 @@ class PaymentController extends Controller
         return response($qrCode->writeString(), 200, ['Content-Type' => $qrCode->getContentType()]);
     }
 
-    // 微信支付只有服务器端回调
+    // 微信支付回调
     public function wechatNotify()
     {
         // 校验回调参数是否正确
