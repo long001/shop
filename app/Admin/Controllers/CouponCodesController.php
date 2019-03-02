@@ -105,9 +105,9 @@ class CouponCodesController extends Controller
         });
         $grid->created_at('创建时间');
 
-        // $grid->actions(function ($actions) {
-        //     $actions->disableView();
-        // });
+        $grid->actions(function ($actions) {
+            $actions->disableView();
+        });
 
         return $grid;
     }
